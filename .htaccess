@@ -1,0 +1,10 @@
+DirectoryIndex info.php indexProyectoDAW.html
+ErrorDocument 404 /208DAWProyectoDAW/error/404.html
+ErrorDocument 403 /208DAWProyectoDAW/error/403.html
+# Detectar el idioma del navegador 
+RewriteCond %{HTTP:Accept-Language} ^es [NC] 
+RewriteRule ^$ /es/indexProyectoDAW.html [L] 
+RewriteCond %{HTTP:Accept-Language} ^pt [NC] 
+RewriteRule ^$ /pt/indexProyectoDAW.html [L] 
+# Redirigir a la página principal si no se encuentra el idioma 
+RewriteRule ^$ /en/indexProyectoDAW.html [L] 
